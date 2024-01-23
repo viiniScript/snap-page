@@ -3,37 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Intro section with dropdown navigation</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  Features
-  Company
-  Careers
-  About
-
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-  
-  <div class="attribution">
+  <header class="header">
+    <img class="logo" src="./images/logo.svg" alt="Logo do site">
+    <nav class="nav">
+      <ul class="nav-menu">
+        <li class="menu-features">
+          <a href="#features">Features</a>
+          <ul class="features-menu">
+            <li><a href="#">Todo List</a></li>
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">Reminders</a></li>
+            <li><a href="#">Planning</a></li>
+          </ul>
+        </li>
+        <li class="menu-company">
+          <a href="#company">Company</a>
+          <ul class="company-menu">
+            <li><a href="#history">History</a></li>
+            <li><a href="#ourteam">Our Team</a></li>
+            <li><a href="#blog">Blog</a></li>
+          </ul>
+        </li>
+        <li class="menu-carrers"><a href="#careers">Careers</a></li>
+        <li class="menu-about"><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <div class="login-register">
+      <a href="#">Login</a>
+      <a href="#">Register</a>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h1>Make remote work</h1>
+      <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+      <a href="#">Learn more</a>
+    </section>
+    <div class="img-container">
+      <img src="images/image-hero-desktop.png" alt="">
+    </div>
+  </main>
+  <footer>
+    <div class="img-container"><img src="images/client-databiz.svg" alt=""></div>
+    <div class="img-container"><img src="images/client-audiophile.svg" alt=""></div>
+    <div class="img-container"><img src="images/client-meet.svg" alt=""></div>
+    <div class="img-container"><img src="images/client-maker.svg" alt=""></div>
+  </footer>
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Your Name Here</a>. -->
   </div>
 </body>
 </html>
