@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
 .img-container {
@@ -37,26 +37,48 @@ ul {
     padding: 2rem;
 }
 
+.header a {
+    color: hsl(0, 0%, 41%);
+}
+
+.header a:hover {
+    color: hsl(0, 0%, 8%);
+}
+
 .nav-menu {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    padding: 0.5rem 1rem;
 }
 
 .features-menu, .company-menu {
     display: none;
 }
 
-.menu-features, .menu-company {
+/* .menu-features, .menu-company {
     display: flex;
     align-items: center;
-}
+} */
 
-.menu-features::after, .menu-company::after {
-    content: "";
+.link-features::after, .link-company::after {
+    content: url(/images/icon-arrow-down.svg);
     display: inline-block;
     width: 10px;
-    height: 6px;
-    background-image: url('../images/icon-arrow-up.svg');
-    background-repeat: no-repeat;
+    height: 10px;
     margin-left: 0.5rem;
+}
+
+.login-register {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link-register {
+    border: 1px solid hsl(0, 0%, 41%);
+    border-radius: 10px;
+    padding: 1rem 2rem;
 }
