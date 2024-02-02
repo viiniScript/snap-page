@@ -9,11 +9,8 @@ html {
 }
 
 body {
-    font-size: 1.8rem;
-}
-
-.img-container {
-    max-width: 300px;
+    font-size: 1.6rem;
+    font-family: 'Epilogue', sans-serif;
 }
 
 a {
@@ -34,7 +31,18 @@ ul {
     justify-content: space-between;
     align-items: center;
 
-    padding: 2rem;
+    padding: 2rem 4rem;
+}
+
+.logonav-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.logo-container {
+    display: inline-block;
+    margin-top: 0.5rem;
 }
 
 .header a {
@@ -52,23 +60,64 @@ ul {
 
 .nav-menu a {
     padding: 0.5rem 1rem;
+    display: inline-block;
 }
 
 .features-menu, .company-menu {
-    display: none;
+    display: flex; /*Listener Aqui!!*/
+    flex-direction: column;
 }
 
-/* .menu-features, .menu-company {
+.menu-features, .menu-company {
+    position: relative;
+}
+
+.menu-features.active .features-menu, .menu-company.active .company-menu {
     display: flex;
-    align-items: center;
-} */
+}
 
 .link-features::after, .link-company::after {
     content: url(/images/icon-arrow-down.svg);
-    display: inline-block;
-    width: 10px;
-    height: 10px;
     margin-left: 0.5rem;
+}
+
+.features-menu {
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    width: max-content;
+    gap: 1.5rem;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.20) 0px 5px 15px;
+    border-radius: 10px;
+    padding: 2.5rem;
+}
+
+.features-menu [class^="link"], .company-menu [class^="link"] {
+    display: block;
+    padding: 0;
+}
+
+.features-menu [class^="link"] img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    margin-right: 1rem;
+}
+
+
+
+
+
+.company-menu {
+    position: absolute;
+    top: 40px;
+    width: max-content;
+    gap: 1.5rem;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.20) 0px 5px 15px;
+    border-radius: 10px;
+    padding: 2.5rem;
 }
 
 .login-register {
@@ -81,4 +130,83 @@ ul {
     border: 1px solid hsl(0, 0%, 41%);
     border-radius: 10px;
     padding: 1rem 2rem;
+}
+
+.link-register:hover {
+    border-color: hsl(0, 0%, 8%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* MAIN */
+.main {
+    max-width: 1200px;
+    /* height: 80rem; */
+    margin: 4rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "content    image"
+        "client     image";
+}
+
+.section-content {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 3rem;
+}
+
+.section-title {
+    font-size: 7rem;
+}
+
+.section-title span {
+    display: block;
+}
+
+.section-p {
+    max-width: 40rem;
+    line-height: 1.4;
+    color: hsl(0, 0%, 41%);
+}
+
+.section-button {
+    display: inline-block;
+    color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 8%);
+    width: max-content;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+.section-button:hover {
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 8%);
+    border-color:  hsl(0, 0%, 8%);
+}
+
+.img-container {
+    grid-area: image;
+    max-width: 40rem;
+    justify-self: center;
+}
+
+.client-div {
+    grid-area: client;
+    align-self: end;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
 }
