@@ -1,0 +1,62 @@
+.main {
+    max-width: 1200px;
+    /* height: 80rem; */
+    margin: 4rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "content    image"
+        "client     image";
+}
+
+.section-content {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 3rem;
+}
+
+.section-title {
+    font-size: 6rem;
+}
+
+.section-title span {
+    display: block;
+}
+
+.section-p {
+    max-width: 40rem;
+    line-height: 1.4;
+    color: hsl(0, 0%, 41%);
+}
+
+.section-button {
+    display: inline-block;
+    color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 8%);
+    width: max-content;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+.section-button:hover {
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 8%);
+    border-color:  hsl(0, 0%, 8%);
+}
+
+.img-container {
+    grid-area: image;
+    max-width: 40rem;
+    justify-self: center;
+}
+
+.client-div {
+    grid-area: client;
+    align-self: end;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
