@@ -15,10 +15,13 @@
 
 <body>
   <header class="header">
-    <div class="logonav-container">      
-      <a class="logo-container" href="/">
-        <img class="logo" src="./images/logo.svg" alt="Logo do site">
-      </a>
+    <a class="logo-container" href="/">
+      <img class="logo" src="./images/logo.svg" alt="Logo do site">
+    </a>
+    <a href="#" data-menu="button">
+      <img src="./images/icon-menu.svg" alt="">
+    </a>
+    <div class="nav-loginregister" data-menu="container">
       <nav class="nav">
         <ul class="nav-menu">
           <li class="menu-features" data-dropdown>
@@ -42,10 +45,10 @@
           <li class="menu-about"><a href="#about">About</a></li>
         </ul>
       </nav>
-    </div>
-    <div class="login-register">
-      <a href="#">Login</a>
-      <a class="link-register" href="#">Register</a>
+      <div class="login-register">
+        <a href="#">Login</a>
+        <a class="link-register" href="#">Register</a>
+      </div>
     </div>
   </header>
   <main class="main">
@@ -55,9 +58,10 @@
         and watch productivity soar.</p>
       <a class="section-button" href="#">Learn more</a>
     </section>
-    <div class="img-container">
-      <img src="images/image-hero-desktop.png" alt="">
-    </div>
+    <picture class="img-container">
+      <source media="(min-width: 860px)" srcset="images/image-hero-desktop.png">
+      <img src="images/image-hero-mobile.png" alt="">
+    </picture>
     <div class="client-div">
       <div class="img-container"><img src="images/client-databiz.svg" alt=""></div>
       <div class="img-container"><img src="images/client-audiophile.svg" alt=""></div>
@@ -65,8 +69,8 @@
       <div class="img-container"><img src="images/client-maker.svg" alt=""></div>
     </div>
   </main>
-
-  <script src="./script.js"></script>
+  <section class="modal" data-modal></section>
+  <script type="module" src="js/script.js"></script>
 </body>
 
 </html>

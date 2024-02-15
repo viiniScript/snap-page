@@ -2,18 +2,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 1rem 4rem;
-}
-
-.logonav-container {
-    display: flex;
-    align-items: center;
+    padding: 1rem 5rem;
     gap: 4rem;
 }
 
 .logo-container {
-    display: inline-block;
     margin-top: 0.5rem;
 }
 
@@ -25,6 +18,16 @@
     color: hsl(0, 0%, 8%);
 }
 
+[data-menu="button"] {
+    display: none;
+}
+
+[data-menu="container"] {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
 .nav-menu {
     display: flex;
     gap: 2rem;
@@ -32,11 +35,6 @@
 
 .menu-features, .menu-company {
     position: relative;
-}
-
-.nav-menu a {
-    padding: 0.5rem 1rem;
-    display: inline-block;
 }
 
 .features-menu, .company-menu {
@@ -56,32 +54,49 @@
     right: 15px;
 }
 
+.features-menu a, .company-menu a {
+    padding: 0.5rem 1rem;
+}
+
 [data-dropdown]:hover ul,
 [data-dropdown].active ul {
     display: flex;
+    animation: show-up 0.3s forwards;
 }
 
-.nav-menu > li[class^="menu-"] > a {
+@keyframes show-up {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -30px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.nav-menu > li > a {
     padding: 2rem 1rem;
 }
 
 .link-features::after, .link-company::after {
-    content: url(/images/icon-arrow-down.svg);
+    content: url('/images/icon-arrow-down.svg');
     margin-left: 0.5rem;
 }
 
-.features-menu [class^="link"] img {
+.features-menu a[class^="link"] img {
     display: inline-block;
     vertical-align: middle;
     width: 15px;
     margin-right: 1rem;
 }
 
-[data-dropdown].active > a::after, [data-dropdown] > a::after {
+[data-dropdown].active > a::after, [data-dropdown]:hover > a::after {
     content: url('../images/icon-arrow-up.svg');
-} /*Listener Aqui!!*/
+}
 
 .login-register {
+    justify-self: flex-end;
     display: flex;
     align-items: center;
     gap: 3rem;
@@ -89,10 +104,11 @@
 
 .link-register {
     border: 1px solid hsl(0, 0%, 41%);
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 1rem 2rem;
 }
 
 .link-register:hover {
     border-color: hsl(0, 0%, 8%);
 }
+
